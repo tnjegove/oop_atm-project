@@ -15,8 +15,8 @@ public class GUIATM {
         SwingUtilities.invokeLater(new Runnable(){
             @Override
             public void run () {
-                MainFrame frame = new MainFrame();
-                frame.setVisible(true);
+                ATMLoginForm login = new ATMLoginForm();
+                login.setVisible(true);
             }
         
         });
