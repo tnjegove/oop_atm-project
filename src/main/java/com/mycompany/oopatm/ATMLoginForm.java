@@ -85,23 +85,13 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jtxt_userName = new javax.swing.JTextField();
         jpw_createCurrentAccPw = new javax.swing.JPasswordField();
         jbtn_createCurrentAcc = new javax.swing.JButton();
-        jPanel_userInterface = new javax.swing.JPanel();
-        jlbl_currentacctitle1 = new javax.swing.JLabel();
-        jlbl_accno1 = new javax.swing.JLabel();
-        jlnl_holdername1 = new javax.swing.JLabel();
-        jlnl_joindate1 = new javax.swing.JLabel();
-        jlbl_balance1 = new javax.swing.JLabel();
-        jlbl_username1 = new javax.swing.JLabel();
-        jlbl_password1 = new javax.swing.JLabel();
-        jtxt_accno1 = new javax.swing.JTextField();
-        jtxt_holderName1 = new javax.swing.JTextField();
-        jtxt_joinDate1 = new javax.swing.JTextField();
-        jtxt_balance1 = new javax.swing.JTextField();
-        jtxt_userName1 = new javax.swing.JTextField();
-        jpw_createCurrentAccPw1 = new javax.swing.JPasswordField();
-        jbtn_userInterfaceGoBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(500, 500));
+        setResizable(false);
+        setSize(new java.awt.Dimension(500, 500));
+
+        jPanel_loginScreen.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jbtn_login.setText("Login");
 
@@ -119,15 +109,13 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jPanel_loginScreen.setLayout(jPanel_loginScreenLayout);
         jPanel_loginScreenLayout.setHorizontalGroup(
             jPanel_loginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_loginScreenLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_loginScreenLayout.createSequentialGroup()
+                .addContainerGap(140, Short.MAX_VALUE)
                 .addGroup(jPanel_loginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_loginScreenLayout.createSequentialGroup()
-                        .addGap(223, 223, 223)
-                        .addGroup(jPanel_loginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jlbl_title)
-                            .addComponent(jbtn_login)))
+                        .addGap(79, 79, 79)
+                        .addComponent(jbtn_login))
                     .addGroup(jPanel_loginScreenLayout.createSequentialGroup()
-                        .addGap(144, 144, 144)
                         .addGroup(jPanel_loginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel_username)
                             .addComponent(jLabel_password))
@@ -135,14 +123,18 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                         .addGroup(jPanel_loginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtxt_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addGap(125, 125, 125))
+            .addGroup(jPanel_loginScreenLayout.createSequentialGroup()
+                .addGap(211, 211, 211)
+                .addComponent(jlbl_title)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_loginScreenLayout.setVerticalGroup(
             jPanel_loginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_loginScreenLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(69, 69, 69)
                 .addComponent(jlbl_title)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 405, Short.MAX_VALUE)
+                .addGap(48, 48, 48)
                 .addGroup(jPanel_loginScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_username)
                     .addComponent(jtxt_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -152,8 +144,10 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                     .addComponent(jLabel_password))
                 .addGap(67, 67, 67)
                 .addComponent(jbtn_login)
-                .addGap(67, 67, 67))
+                .addContainerGap(399, Short.MAX_VALUE))
         );
+
+        jPanel_adminControlPanel.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jlblTitle.setText("Admin control panel");
 
@@ -183,7 +177,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                     .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
                         .addGap(198, 198, 198)
                         .addComponent(jlblTitle)))
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         jPanel_adminControlPanelLayout.setVerticalGroup(
             jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,7 +192,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 .addComponent(jbtn_changePin)
                 .addGap(41, 41, 41)
                 .addComponent(jbtn_back)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
 
         jlbl_currentacctitle.setText("Create new current account");
@@ -256,7 +250,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                             .addComponent(jpw_createCurrentAccPw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel_createNewCurrentAccLayout.createSequentialGroup()
                                 .addComponent(jtxt_holderName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                                 .addComponent(jbtn_createCurrentAcc)))))
                 .addGap(74, 74, 74))
         );
@@ -294,110 +288,12 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 .addGroup(jPanel_createNewCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jlbl_password)
                     .addComponent(jpw_createCurrentAccPw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
-        );
-
-        jlbl_currentacctitle1.setText("Create new current account");
-
-        jlbl_accno1.setText("Account number");
-
-        jlnl_holdername1.setText("Holder name");
-
-        jlnl_joindate1.setText("Join date");
-
-        jlbl_balance1.setText("Balance");
-
-        jlbl_username1.setText("User name");
-
-        jlbl_password1.setText("Password");
-
-        jtxt_accno1.setText("enter account number");
-
-        jtxt_holderName1.setText("enter holder name");
-
-        jtxt_joinDate1.setText("enter join date");
-
-        jtxt_balance1.setText("enter balance");
-
-        jtxt_userName1.setText("enter user name");
-
-        jpw_createCurrentAccPw1.setText("enter user password");
-
-        jbtn_userInterfaceGoBack.setText("Go back");
-
-        javax.swing.GroupLayout jPanel_userInterfaceLayout = new javax.swing.GroupLayout(jPanel_userInterface);
-        jPanel_userInterface.setLayout(jPanel_userInterfaceLayout);
-        jPanel_userInterfaceLayout.setHorizontalGroup(
-            jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                        .addGap(212, 212, 212)
-                        .addComponent(jlbl_currentacctitle1))
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jlnl_holdername1)
-                            .addComponent(jlbl_accno1)
-                            .addComponent(jlnl_joindate1)
-                            .addComponent(jlbl_balance1)
-                            .addComponent(jlbl_username1)
-                            .addComponent(jlbl_password1))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtxt_joinDate1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtxt_balance1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtxt_userName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jpw_createCurrentAccPw1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtxt_accno1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtxt_holderName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
-                                .addComponent(jbtn_userInterfaceGoBack)))))
-                .addGap(76, 76, 76))
-        );
-        jPanel_userInterfaceLayout.setVerticalGroup(
-            jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jlbl_currentacctitle1)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlbl_accno1)
-                            .addComponent(jtxt_accno1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlnl_holdername1)
-                            .addComponent(jtxt_holderName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jbtn_userInterfaceGoBack)))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlnl_joindate1)
-                    .addComponent(jtxt_joinDate1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlbl_balance1)
-                    .addComponent(jtxt_balance1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlbl_username1)
-                    .addComponent(jtxt_userName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlbl_password1)
-                    .addComponent(jpw_createCurrentAccPw1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         jLPane.setLayer(jPanel_loginScreen, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLPane.setLayer(jPanel_adminControlPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLPane.setLayer(jPanel_createNewCurrentAcc, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLPane.setLayer(jPanel_userInterface, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLPaneLayout = new javax.swing.GroupLayout(jLPane);
         jLPane.setLayout(jLPaneLayout);
@@ -407,19 +303,17 @@ public class ATMLoginForm extends JFrame implements ActionListener {
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel_adminControlPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel_createNewCurrentAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel_userInterface, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel_createNewCurrentAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jLPaneLayout.setVerticalGroup(
             jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_loginScreen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel_loginScreen, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel_adminControlPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel_adminControlPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLPaneLayout.createSequentialGroup()
                     .addComponent(jPanel_createNewCurrentAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jPanel_userInterface, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGap(353, 353, 353)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -492,7 +386,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 else if((AccNo=userNamePasswordIsCorrect(jtxt_username.getText(),jpassword.getPassword()))!=null) {///UNFINISHED!!!!! 
                     System.out.println("Reload file into accounts....");
                     jPanel_loginScreen.setVisible(false);
-                    jPanel_userInterface.setVisible(true);
+                    //jPanel_userInterface.setVisible(true);
                     /*if(file.exists()){ // this block shouldn't be here....
                         try {
                             FileInputStream fi = new FileInputStream(file);
@@ -619,43 +513,28 @@ public class ATMLoginForm extends JFrame implements ActionListener {
     private javax.swing.JPanel jPanel_adminControlPanel;
     private javax.swing.JPanel jPanel_createNewCurrentAcc;
     private javax.swing.JPanel jPanel_loginScreen;
-    private javax.swing.JPanel jPanel_userInterface;
     private javax.swing.JButton jbtn_back;
     private javax.swing.JButton jbtn_changePin;
     private javax.swing.JButton jbtn_createCurrentAcc;
     private javax.swing.JButton jbtn_currentAcc;
     private javax.swing.JButton jbtn_login;
     private javax.swing.JButton jbtn_savingsAcc;
-    private javax.swing.JButton jbtn_userInterfaceGoBack;
     private javax.swing.JLabel jlblTitle;
     private javax.swing.JLabel jlbl_accno;
-    private javax.swing.JLabel jlbl_accno1;
     private javax.swing.JLabel jlbl_balance;
-    private javax.swing.JLabel jlbl_balance1;
     private javax.swing.JLabel jlbl_currentacctitle;
-    private javax.swing.JLabel jlbl_currentacctitle1;
     private javax.swing.JLabel jlbl_password;
-    private javax.swing.JLabel jlbl_password1;
     private javax.swing.JLabel jlbl_title;
     private javax.swing.JLabel jlbl_username;
-    private javax.swing.JLabel jlbl_username1;
     private javax.swing.JLabel jlnl_holdername;
-    private javax.swing.JLabel jlnl_holdername1;
     private javax.swing.JLabel jlnl_joindate;
-    private javax.swing.JLabel jlnl_joindate1;
     private javax.swing.JPasswordField jpassword;
     private javax.swing.JPasswordField jpw_createCurrentAccPw;
-    private javax.swing.JPasswordField jpw_createCurrentAccPw1;
     private javax.swing.JTextField jtxt_accno;
-    private javax.swing.JTextField jtxt_accno1;
     private javax.swing.JTextField jtxt_balance;
-    private javax.swing.JTextField jtxt_balance1;
     private javax.swing.JTextField jtxt_holderName;
-    private javax.swing.JTextField jtxt_holderName1;
     private javax.swing.JTextField jtxt_joinDate;
-    private javax.swing.JTextField jtxt_joinDate1;
     private javax.swing.JTextField jtxt_userName;
-    private javax.swing.JTextField jtxt_userName1;
     private javax.swing.JTextField jtxt_username;
     // End of variables declaration//GEN-END:variables
 }
