@@ -5,22 +5,77 @@
  */
 package com.mycompany.oopatm;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Tadija
  */
-public class Accounts {
+public class Accounts implements Serializable{
     private String accNo;
     private String accHolder;
     private String joinDate;
     private double balance;
+    private String userName;
+    private char[] userPass;
+
+    public String getAccNo() {
+        return accNo;
+    }
+
+    public void setAccNo(String accNo) {
+        this.accNo = accNo;
+    }
+
+    public String getAccHolder() {
+        return accHolder;
+    }
+
+    public void setAccHolder(String accHolder) {
+        this.accHolder = accHolder;
+    }
+
+    public String getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(String joinDate) {
+        this.joinDate = joinDate;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public char[] getUserPass() {
+        return userPass;
+    }
+
+    public void setUserPass(char[] userPass) {
+        this.userPass = userPass;
+    }
+      
     
     //Constructor
-    public Accounts(String accNo,String accHolder,String joinDate,double balance){
+    public Accounts(String accNo,String accHolder,String joinDate,double balance, String userName, char[] userPass){
         this.accNo=accNo;
         this.accHolder=accHolder;
         this.joinDate=joinDate;
         this.balance=balance;
+        this.userName=userName;
+        this.userPass=userPass;        
     }//end constructor
     
     //Withdraw method

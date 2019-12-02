@@ -26,7 +26,8 @@ public class Utility {
                 String accHolder=currentAccount[1];
                 String joinDate=currentAccount[2];
                 double balance=Double.parseDouble(currentAccount[3]);
-                Accounts acc = new Accounts(accNo,accHolder,joinDate,balance);
+                char[] temp = {'a','s'};//fix this
+                Accounts acc = new Accounts(accNo,accHolder,joinDate,balance,"",temp);//fix this
                 accounts.add(acc);
             }
         }
