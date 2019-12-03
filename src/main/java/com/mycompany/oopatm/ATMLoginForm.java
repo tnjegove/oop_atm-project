@@ -7,6 +7,8 @@ package com.mycompany.oopatm;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.util.Arrays;
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,10 +17,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import static java.lang.Double.parseDouble;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -47,7 +46,38 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jbtn_back.addActionListener(this);
         jbtn_createCurrentAcc.addActionListener(this);
     }
-
+    /**
+     * Clears textfields for better functionality
+     */
+    public void clearTextFields(){
+        jtxt_username.addFocusListener(new FocusListener() {
+            @Override
+            public void focusLost(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+            }
+            @Override
+            public void focusGained(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+                if(jtxt_username.getText().contains("Type in your username...")){
+                    jtxt_username.setText("");
+                }
+            }
+        });
+        jpassword.addFocusListener(new FocusListener() {
+            @Override
+            public void focusLost(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+            }
+            @Override
+            public void focusGained(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+                if(jpassword.getText().contains("password")){
+                    jpassword.setText("");
+                }
+            }
+        });
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -113,12 +143,22 @@ public class ATMLoginForm extends JFrame implements ActionListener {
 
         jpassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jpassword.setText("password");
+        jpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jpasswordActionPerformed(evt);
+            }
+        });
 
         jlbl_title.setFont(new java.awt.Font("Segoe UI Light", 0, 36)); // NOI18N
         jlbl_title.setText("Login screen");
 
         jtxt_username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxt_username.setText("Type in your username...");
+        jtxt_username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxt_usernameActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel_loginScreenLayout = new javax.swing.GroupLayout(jPanel_loginScreen);
         jPanel_loginScreen.setLayout(jPanel_loginScreenLayout);
@@ -461,6 +501,14 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jPanel_userInterface.setVisible(false);
         jPanel_loginScreen.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jtxt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxt_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxt_usernameActionPerformed
+
+    private void jpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpasswordActionPerformed
     private String userNamePasswordIsCorrect (String inputUsername, char[] inputPassword) {
         //boolean userNamePasswordIsCorrect =false;
         
