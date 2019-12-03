@@ -45,6 +45,20 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jPanel_loginScreen" alignment="0" pref="503" max="32767" attributes="0"/>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Component id="jPanel_adminControlPanel" alignment="1" pref="503" max="32767" attributes="0"/>
+              </Group>
+              <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
+                  <Component id="jPanel_createNewCurrentAcc" alignment="1" max="32767" attributes="0"/>
+              </Group>
+              <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
+                  <Component id="jPanel_userInterface" alignment="1" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jPanel_loginScreen" alignment="0" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Component id="jPanel_adminControlPanel" alignment="1" max="32767" attributes="0"/>
@@ -52,19 +66,8 @@
               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
                   <Component id="jPanel_createNewCurrentAcc" alignment="0" max="32767" attributes="0"/>
               </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel_loginScreen" alignment="0" pref="700" max="32767" attributes="0"/>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Component id="jPanel_adminControlPanel" alignment="1" pref="700" max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jPanel_createNewCurrentAcc" alignment="0" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="353" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
+                  <Component id="jPanel_userInterface" alignment="1" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -81,7 +84,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="140" max="32767" attributes="0"/>
+                      <EmptySpace pref="143" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
@@ -93,15 +96,15 @@
                                   <Component id="jLabel_password" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jpassword" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jtxt_username" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jpassword" min="-2" pref="96" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
                       <Component id="jlbl_title" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
@@ -111,7 +114,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                       <Component id="jlbl_title" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -125,7 +128,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                       <Component id="jbtn_login" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="399" max="32767" attributes="0"/>
+                      <EmptySpace pref="162" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -272,13 +275,13 @@
                                   <Component id="jpw_createCurrentAccPw" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jtxt_holderName" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                                       <Component id="jbtn_createCurrentAcc" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -292,20 +295,13 @@
                           <Component id="jlbl_accno" min="-2" max="-2" attributes="0"/>
                           <Component id="jtxt_accno" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jlnl_holdername" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jtxt_holderName" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="jbtn_createCurrentAcc" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jlnl_holdername" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtxt_holderName" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbtn_createCurrentAcc" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jlnl_joindate" min="-2" max="-2" attributes="0"/>
                           <Component id="jtxt_joinDate" min="-2" max="-2" attributes="0"/>
@@ -402,6 +398,181 @@
             <Component class="javax.swing.JButton" name="jbtn_createCurrentAcc">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Create!"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel_userInterface">
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jlbl_userInterfaceHolderName" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jlbl_userInterfaceAccNo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="136" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jlbl_userInterfaceAccNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jlbl_userInterfaceHolderName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="85" max="32767" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="User interface "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jlbl_userInterfaceAccNo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Account number"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jlbl_userInterfaceHolderName">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Holder name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Balance"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Join date"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel6"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel7">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel7"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Logout"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Transfer"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Deposit"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Withdraw"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Change PIN"/>
               </Properties>
             </Component>
           </SubComponents>
