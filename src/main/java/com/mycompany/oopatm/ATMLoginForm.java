@@ -36,6 +36,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jPanel_adminControlPanel.setVisible(false);
         jPanel_createNewCurrentAcc.setVisible(false);
         jPanel_userInterface.setVisible(false);
+        clearTextFields();
     }
     
     private void initEventListeners() {
@@ -687,7 +688,11 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jtxt_username.addFocusListener(new FocusListener() {
             @Override
             public void focusLost(FocusEvent arg0) {
-                // TODO Auto-generated method stub
+                if(jtxt_username.getText().equals("")){
+                    jtxt_username.setText("Type in your username...");
+                }else{
+                    
+                }
             }
             @Override
             public void focusGained(FocusEvent arg0) {
@@ -700,7 +705,9 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jpassword.addFocusListener(new FocusListener() {
             @Override
             public void focusLost(FocusEvent arg0) {
-                // TODO Auto-generated method stub
+                if(jpassword.getText().equals("")){
+                    jpassword.setText("password");
+                }
             }
             @Override
             public void focusGained(FocusEvent arg0) {
