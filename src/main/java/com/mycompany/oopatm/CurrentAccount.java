@@ -10,8 +10,8 @@ package com.mycompany.oopatm;
  * @author x19112700
  */
 public class CurrentAccount extends Accounts{
-    public CurrentAccount() {
-        super("","","",0,"",[]);
+    public CurrentAccount(String accNo,String accHolder,String joinDate,double balance, String userName, char[] userPass, float interest) {
+        super(accNo, accHolder, joinDate, balance, userName, userPass);
     }
     
 }
