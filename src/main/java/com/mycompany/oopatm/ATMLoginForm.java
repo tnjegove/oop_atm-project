@@ -108,7 +108,6 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(520, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(500, 500));
 
@@ -118,6 +117,11 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jPanel_loginScreen.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jbtn_login.setText("Login");
+        jbtn_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_loginActionPerformed(evt);
+            }
+        });
 
         jpassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jpassword.setText("password");
@@ -161,7 +165,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                     .addGroup(jPanel_loginScreenLayout.createSequentialGroup()
                         .addGap(166, 166, 166)
                         .addComponent(jlbl_title)))
-                .addGap(0, 161, Short.MAX_VALUE))
+                .addGap(0, 141, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_loginScreenLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jbtn_login, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -213,54 +217,64 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 .addComponent(jlblTitle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
                 .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbtn_currentAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator2)
                     .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel9)
-                        .addGap(53, 53, 53)))
-                .addGap(18, 18, 18)
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(jLabel9)
+                                .addGap(91, 91, 91))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_adminControlPanelLayout.createSequentialGroup()
+                                .addComponent(jSeparator2)
+                                .addGap(18, 18, 18))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_adminControlPanelLayout.createSequentialGroup()
+                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbtn_currentAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(27, 27, 27)))
                 .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_adminControlPanelLayout.createSequentialGroup()
-                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jbtn_changePin, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(jbtn_back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jSeparator4)
-                            .addComponent(jSeparator3))
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_adminControlPanelLayout.createSequentialGroup()
                         .addComponent(jLabel11)
-                        .addGap(87, 87, 87))))
+                        .addGap(84, 84, 84))
+                    .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
+                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jbtn_back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbtn_changePin, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
         jPanel_adminControlPanelLayout.setVerticalGroup(
             jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(jlblTitle)
+                .addGap(49, 49, 49)
+                .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbtn_changePin, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(jbtn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                        .addComponent(jlblTitle)
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jbtn_currentAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(89, Short.MAX_VALUE))
+                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbtn_currentAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbtn_changePin, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
+                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbtn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         jlbl_currentacctitle.setText("Create new current account");
@@ -382,6 +396,11 @@ public class ATMLoginForm extends JFrame implements ActionListener {
 
         jButton2.setText("Transfer");
         jButton2.setToolTipText("");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Deposit");
 
@@ -482,9 +501,9 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         );
         jLPaneLayout.setVerticalGroup(
             jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_loginScreen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel_loginScreen, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel_adminControlPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel_adminControlPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE))
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel_createNewCurrentAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -497,11 +516,11 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
+            .addComponent(jLPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
         );
 
         pack();
@@ -520,6 +539,14 @@ public class ATMLoginForm extends JFrame implements ActionListener {
     private void jpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jpasswordActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jbtn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_loginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtn_loginActionPerformed
     private String userNamePasswordIsCorrect (String inputUsername, char[] inputPassword) {
         //boolean userNamePasswordIsCorrect =false;
         
