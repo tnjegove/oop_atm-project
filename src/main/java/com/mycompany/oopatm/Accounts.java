@@ -79,21 +79,10 @@ public class Accounts implements Serializable{
         this.userPass=userPass;        
     }//end constructor
     
-    //Withdraw method
-    public void withdraw(double amount){
-        this.balance=this.balance -amount;
-    }//end wihdraw method
+    public void changeBalanceOnTransfer(double amount) {
+        this.balance = this.balance + amount;
     
-    //Deposit method
-    public void deposit(double amount){
-         this.balance=this.balance + amount;
-    }//end deposit method
-    
-    //Transfer method
-    public void transfer(Accounts a,double amount){
-        this.withdraw(amount);
-        a.deposit(amount);
-    }//end transfer method
+    }
     
     @Override
     public String toString(){

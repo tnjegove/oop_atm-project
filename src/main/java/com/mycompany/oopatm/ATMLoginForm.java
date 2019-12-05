@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -49,6 +50,10 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jbtn_back.addActionListener(this);
         jbtn_createCurrentAcc.addActionListener(this);
         jbtn_SavingAccCreate.addActionListener(this);
+        jbtn_tranfer.addActionListener(this);
+        jbtn_deposit.addActionListener(this);
+        jbtn_withdraw.addActionListener(this);
+        
     }
     
     /**
@@ -122,10 +127,9 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jbtn_tranfer = new javax.swing.JButton();
+        jbtn_deposit = new javax.swing.JButton();
+        jbtn_withdraw = new javax.swing.JButton();
         jPanel_userInterfaceSavingAcc = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -140,6 +144,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jPasswordField2 = new javax.swing.JPasswordField();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -398,7 +403,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                                 .addComponent(jbtn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(332, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         jlbl_currentacctitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -437,9 +442,9 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jbtn_createCurrentAcc.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jbtn_createCurrentAcc.setText("Create!");
 
-        jLabel10.setText("jLabel10");
+        jLabel10.setText("Pin");
 
-        jtxt_createCurrentAccPIN.setText("jTextField1");
+        jtxt_createCurrentAccPIN.setText("Enter PIN number");
 
         javax.swing.GroupLayout jPanel_createNewCurrentAccLayout = new javax.swing.GroupLayout(jPanel_createNewCurrentAcc);
         jPanel_createNewCurrentAcc.setLayout(jPanel_createNewCurrentAccLayout);
@@ -536,14 +541,12 @@ public class ATMLoginForm extends JFrame implements ActionListener {
             }
         });
 
-        jButton2.setText("Transfer");
-        jButton2.setToolTipText("");
+        jbtn_tranfer.setText("Transfer");
+        jbtn_tranfer.setToolTipText("");
 
-        jButton3.setText("Deposit");
+        jbtn_deposit.setText("Deposit");
 
-        jButton4.setText("Withdraw");
-
-        jButton5.setText("Change PIN");
+        jbtn_withdraw.setText("Withdraw");
 
         javax.swing.GroupLayout jPanel_userInterfaceCurrentAccLayout = new javax.swing.GroupLayout(jPanel_userInterfaceCurrentAcc);
         jPanel_userInterfaceCurrentAcc.setLayout(jPanel_userInterfaceCurrentAccLayout);
@@ -579,11 +582,10 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                         .addComponent(jLabel6)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 353, Short.MAX_VALUE)
                 .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
-                    .addComponent(jButton4)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(86, 86, 86))
+                    .addComponent(jbtn_withdraw)
+                    .addComponent(jbtn_tranfer)
+                    .addComponent(jbtn_deposit))
+                .addGap(96, 96, 96))
         );
         jPanel_userInterfaceCurrentAccLayout.setVerticalGroup(
             jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -596,13 +598,13 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                         .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlbl_userInterfaceAccNo)
                             .addComponent(jLabel6)
-                            .addComponent(jButton2))
+                            .addComponent(jbtn_tranfer))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlbl_userInterfaceHolderName)
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3))
+                        .addComponent(jbtn_deposit))
                     .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
                         .addComponent(jLabel3)))
@@ -611,10 +613,8 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                     .addComponent(jLabel5)
                     .addComponent(jLabel7))
                 .addGap(4, 4, 4)
-                .addComponent(jButton4)
-                .addGap(45, 45, 45)
-                .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 326, Short.MAX_VALUE)
+                .addComponent(jbtn_withdraw)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 394, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(64, 64, 64))
         );
@@ -645,6 +645,13 @@ public class ATMLoginForm extends JFrame implements ActionListener {
 
         jPasswordField2.setText("jPasswordField2");
 
+        jButton6.setText("Go back");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel_userInterfaceSavingAccLayout = new javax.swing.GroupLayout(jPanel_userInterfaceSavingAcc);
         jPanel_userInterfaceSavingAcc.setLayout(jPanel_userInterfaceSavingAccLayout);
         jPanel_userInterfaceSavingAccLayout.setHorizontalGroup(
@@ -671,7 +678,9 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                             .addComponent(jLabel29)
                             .addComponent(jLabel30)
                             .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(80, 80, 80))
         );
         jPanel_userInterfaceSavingAccLayout.setVerticalGroup(
             jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -682,11 +691,16 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jLabel26))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(jLabel27))
-                .addGap(55, 55, 55)
+                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_userInterfaceSavingAccLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel27)))
+                    .addGroup(jPanel_userInterfaceSavingAccLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jButton6)))
+                .addGap(38, 38, 38)
                 .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
                     .addComponent(jLabel28))
@@ -788,6 +802,12 @@ public class ATMLoginForm extends JFrame implements ActionListener {
     private void jbtn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_loginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtn_loginActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        jPanel_userInterfaceSavingAcc.setVisible(false);
+        jPanel_loginScreen.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
     private String userNamePasswordIsCorrect (String inputUsername, char[] inputPassword) {
         //boolean userNamePasswordIsCorrect =false;
         
@@ -915,6 +935,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         }
         else if (e.getSource()==jbtn_createCurrentAcc) {
             
+            
             CurrentAccount account = new CurrentAccount(jtxt_accno.getText(),jtxt_holderName.getText(),jtxt_joinDate.getText(),Double.parseDouble(jtxt_balance.getText()),jtxt_userName.getText(),jpw_createCurrentAccPw.getPassword(),jtxt_createCurrentAccPIN.getText());
             accounts.add(account);
                 if (!file.exists()) {
@@ -1024,17 +1045,210 @@ public class ATMLoginForm extends JFrame implements ActionListener {
             
         }
         
-        else if (e.getSource()==jbtn_changePin) {
-            System.out.println("change pin button pressed...");
-        }
+        
         else if (e.getSource()==jbtn_back) {
             System.out.println("go back button pressed...");
             jPanel_adminControlPanel.setVisible(false);
             jPanel_loginScreen.setVisible(true);
             
         }
+        else if (e.getSource()==jbtn_tranfer) {
+            String transferAmount=JOptionPane.showInputDialog("Enter amount to transfer");
+            String transferAccNo=JOptionPane.showInputDialog("Enter account to transfer money to");
+            
+            
+            for (int i=0;i<accounts.size();i++){
+                if (accounts.get(i).getAccNo().equals(jLabel6.getText())) {
+                    accounts.get(i).changeBalanceOnTransfer(-Double.parseDouble(transferAmount));
+                    jLabel3.setText(Double.toString(accounts.get(i).getBalance()));
+                }
+                if (accounts.get(i).getAccNo().equals(transferAccNo)) {
+                    accounts.get(i).changeBalanceOnTransfer(Double.parseDouble(transferAmount));
+                
+                }
+            }
+            
+            if (!file.exists()) {
+                    try {
+                        
+                        FileOutputStream writeData = new FileOutputStream(file);
+                        ObjectOutputStream writeStream = new ObjectOutputStream(writeData);
+
+                        writeStream.writeObject(accounts);
+                        writeStream.flush();
+                        writeStream.close();
+                        System.out.println("All accounts are loaded from file and stored in accounts?");
+
+                    } catch (FileNotFoundException e2) {
+                        System.out.println("File not found");
+                    } catch (IOException e2) {                
+                        System.out.println("Error initializing output stream");
+                        e2.printStackTrace();
+                    } //catch (ClassNotFoundException e2) {
+                        //System.out.println("Class not found");
+                    //}
+
+                
+                }
+                else {
+                    System.out.println("file exist, flush, write new. !");
+                    file.delete();
+                    try {
+                        
+                        FileOutputStream writeData = new FileOutputStream(file);
+                        ObjectOutputStream writeStream = new ObjectOutputStream(writeData);
+
+                        writeStream.writeObject(accounts);
+                        writeStream.flush();
+                        writeStream.close();
+                        System.out.println("All accounts are loaded from file and stored in accounts?");
+
+                    } catch (FileNotFoundException e2) {
+                        System.out.println("File not found");
+                    } catch (IOException e2) {                
+                        System.out.println("Error initializing output stream");
+                        e2.printStackTrace();
+                    }
+                    
+                }
+            
+        }
+        else if (e.getSource()==jbtn_deposit) {
+            String amountToDeposit = JOptionPane.showInputDialog("Enter amount to deposit");
+            for (int i=0;i<accounts.size();i++) {
+                if (accounts.get(i).getAccNo()==jLabel6.getText()) {
+                    accounts.get(i).changeBalanceOnTransfer(Double.parseDouble(amountToDeposit));
+                    jLabel3.setText(Double.toString(accounts.get(i).getBalance()));
+                }
+                
+            }
+            writeToFile();
+        }
+        else if (e.getSource()==jbtn_withdraw) {
+            String amountToWithdraw = JOptionPane.showInputDialog("Enter amount to withdraw");
+            for (int i=0;i<accounts.size();i++) {
+                if (accounts.get(i).getAccNo()==jLabel6.getText()) {
+                    accounts.get(i).changeBalanceOnTransfer(-Double.parseDouble(amountToWithdraw));
+                    jLabel3.setText(Double.toString(accounts.get(i).getBalance()));
+                }
+                
+            }
+            writeToFile();
+        }
+        else if (e.getSource()==jbtn_changePin) {
+            String changePIN = JOptionPane.showInputDialog("Enter account number"); 
+            System.out.println("number receivd");
+            readFromFile();
+            for (int i=0;i<accounts.size();i++) {                
+                if (accounts.get(i).getAccNo().equals(changePIN)) {
+                    System.out.println("accoutn with pin has been found");
+                    if (accounts.get(i) instanceof CurrentAccount) {
+                        System.out.println("accoutn id as current");
+                        CurrentAccount obj;
+                        obj= (CurrentAccount)accounts.get(i);
+                        System.out.println(obj.getUserPin());
+                        String oldPIN = JOptionPane.showInputDialog("Enter old PIN"); 
+                        if (obj.getUserPin().equals(oldPIN)) {
+                            String newPIN = JOptionPane.showInputDialog("Enter new PIN");
+                            obj.setUserPin(newPIN);
+                            accounts.remove(accounts.get(i));
+                            accounts.add(obj);
+                            writeToFile();
+                            break;
+                        }
+                        else JOptionPane.showMessageDialog(rootPane, "Account with that pin doesn't exist!!");
+                    }
+                
+                }
+                else System.out.println("No Account found");
+            
+            }
+            
+            System.out.println();
+            for (int i=0;i<accounts.size();i++) {
+                if (accounts.get(i) instanceof CurrentAccount) {
+                    System.out.println("msg");
+                    CurrentAccount obj2;
+                    obj2 = (CurrentAccount) accounts.get(i);
+                    System.out.println("Account number = "+obj2.getAccNo()+" Account pin = " + obj2.getUserPin());
+                    
+                    
+                }}
+        }
+        
         else System.err.println("Unhandled event....");
         
+    }
+    
+    private void readFromFile() {
+        String url = "accountData.data";
+        File file = new File(url);
+        if (file.exists()) {
+                    try {
+
+                        FileInputStream fi = new FileInputStream(file);
+                        ObjectInputStream oi = new ObjectInputStream(fi);
+
+                        accounts  = (ArrayList<Accounts>) oi.readObject();
+                        oi.close();
+                        fi.close();
+                        
+
+                    } catch (FileNotFoundException e2) {
+                        System.out.println("File not found");
+                    } catch (IOException e2) {                
+                        System.out.println("Error initializing stream");
+                    } catch (ClassNotFoundException e2) {
+                        System.out.println("Class not found");
+                    }
+    }}
+    
+    private void writeToFile() {
+        String url = "accountData.data";
+        File file = new File(url);
+        if (!file.exists()) {
+                    try {
+                        
+                        FileOutputStream writeData = new FileOutputStream(file);
+                        ObjectOutputStream writeStream = new ObjectOutputStream(writeData);
+
+                        writeStream.writeObject(accounts);
+                        writeStream.flush();
+                        writeStream.close();
+                        System.out.println("All accounts are loaded from file and stored in accounts?");
+
+                    } catch (FileNotFoundException e2) {
+                        System.out.println("File not found");
+                    } catch (IOException e2) {                
+                        System.out.println("Error initializing output stream");
+                        e2.printStackTrace();
+                    } //catch (ClassNotFoundException e2) {
+                        //System.out.println("Class not found");
+                    //}
+
+                
+                }
+                else {
+                    System.out.println("file exist, flush, write new. !");
+                    file.delete();
+                    try {
+                        
+                        FileOutputStream writeData = new FileOutputStream(file);
+                        ObjectOutputStream writeStream = new ObjectOutputStream(writeData);
+
+                        writeStream.writeObject(accounts);
+                        writeStream.flush();
+                        writeStream.close();
+                        System.out.println("All accounts are loaded from file and stored in accounts?");
+
+                    } catch (FileNotFoundException e2) {
+                        System.out.println("File not found");
+                    } catch (IOException e2) {                
+                        System.out.println("Error initializing output stream");
+                        e2.printStackTrace();
+                    }
+                    
+                }
     }
     
     private boolean adminUsernameIsCorrect (String inputUsername) {
@@ -1194,10 +1408,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLayeredPane jLPane;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1251,8 +1462,11 @@ public class ATMLoginForm extends JFrame implements ActionListener {
     private javax.swing.JButton jbtn_changePin;
     private javax.swing.JButton jbtn_createCurrentAcc;
     private javax.swing.JButton jbtn_currentAcc;
+    private javax.swing.JButton jbtn_deposit;
     private javax.swing.JButton jbtn_login;
     private javax.swing.JButton jbtn_savingsAcc;
+    private javax.swing.JButton jbtn_tranfer;
+    private javax.swing.JButton jbtn_withdraw;
     private javax.swing.JLabel jlblTitle;
     private javax.swing.JLabel jlbl_accno;
     private javax.swing.JLabel jlbl_balance;
