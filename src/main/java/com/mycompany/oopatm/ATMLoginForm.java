@@ -277,17 +277,17 @@ public class ATMLoginForm extends JFrame implements ActionListener {
 
         jlbl_password.setText("Password");
 
-        jtxt_accno.setText("enter account number");
+        jtxt_accno.setText("Enter Account Number");
 
-        jtxt_holderName.setText("enter holder name");
+        jtxt_holderName.setText("Enter Holder Name");
 
-        jtxt_joinDate.setText("enter join date");
+        jtxt_joinDate.setText("Enter Join Date");
 
-        jtxt_balance.setText("enter balance");
+        jtxt_balance.setText("Enter Balance");
 
-        jtxt_userName.setText("enter user name");
+        jtxt_userName.setText("Enter Username");
 
-        jpw_createCurrentAccPw.setText("enter user password");
+        jpw_createCurrentAccPw.setText("password");
 
         jbtn_createCurrentAcc.setText("Create!");
 
@@ -320,7 +320,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                                 .addComponent(jtxt_holderName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(104, 104, 104)
                                 .addComponent(jbtn_createCurrentAcc)))))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel_createNewCurrentAccLayout.setVerticalGroup(
             jPanel_createNewCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -720,7 +720,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
      * @reference
      * https://stackoverflow.com/questions/5382436/text-box-cleared-when-receives-focus
      */
-    public void clearTextFields(){
+     public void clearTextFields(){
         jtxt_username.addFocusListener(new FocusListener() {
             @Override
             public void focusLost(FocusEvent arg0) {
@@ -753,8 +753,102 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 }
             }
         });
+        // End of Login form clearTextFields()
+        
+        // Start of CreateNewCurrentAccount form clearTextFields()
+        jtxt_accno.addFocusListener(new FocusListener() {
+            @Override
+            public void focusLost(FocusEvent arg0) {
+                if(jtxt_accno.getText().equals("")){
+                    jtxt_accno.setText("Enter Account Number");
+                }else{
+                    
+                }
+            }
+            @Override
+            public void focusGained(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+                if(jtxt_accno.getText().contains("Enter Account Number")){
+                    jtxt_accno.setText("");
+                }
+            }
+        });
+        jtxt_holderName.addFocusListener(new FocusListener() {
+            @Override
+            public void focusLost(FocusEvent arg0) {
+                if(jtxt_holderName.getText().equals("")){
+                    jtxt_holderName.setText("Enter Holder Name");
+                }
+            }
+            @Override
+            public void focusGained(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+                if(jtxt_holderName.getText().contains("Enter Holder Name")){
+                    jtxt_holderName.setText("");
+                }
+            }
+        });
+        jtxt_joinDate.addFocusListener(new FocusListener() {
+            @Override
+            public void focusLost(FocusEvent arg0) {
+                if(jtxt_joinDate.getText().equals("")){
+                    jtxt_joinDate.setText("Enter Join Date");
+                }
+            }
+            @Override
+            public void focusGained(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+                if(jtxt_joinDate.getText().contains("Enter Join Date")){
+                    jtxt_joinDate.setText("");
+                }
+            }
+        });jtxt_balance.addFocusListener(new FocusListener() {
+            @Override
+            public void focusLost(FocusEvent arg0) {
+                if(jtxt_balance.getText().equals("")){
+                    jtxt_balance.setText("Enter Balance");
+                }
+            }
+            @Override
+            public void focusGained(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+                if(jtxt_balance.getText().contains("Enter Balance")){
+                    jtxt_balance.setText("");
+                }
+            }
+        });jtxt_userName.addFocusListener(new FocusListener() {
+            @Override
+            public void focusLost(FocusEvent arg0) {
+                if(jtxt_userName.getText().equals("")){
+                    jtxt_userName.setText("Enter Username");
+                }
+            }
+            @Override
+            public void focusGained(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+                if(jtxt_userName.getText().contains("Enter Username")){
+                    jtxt_userName.setText("");
+                }
+            }
+        });jpw_createCurrentAccPw.addFocusListener(new FocusListener() {
+            @Override
+            public void focusLost(FocusEvent arg0) {
+                if(jpw_createCurrentAccPw.getText().equals("")){
+                    jpw_createCurrentAccPw.setText("password");
+                }
+            }
+            @Override
+            public void focusGained(FocusEvent arg0) {
+                // TODO Auto-generated method stub
+                if(jpw_createCurrentAccPw.getText().contains("password")){
+                    jpw_createCurrentAccPw.setText("");
+                }
+            }
+        });
+        // End of CreateNewCurrentAccount form clearTextFields()
         
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
