@@ -11,6 +11,10 @@ package com.mycompany.oopatm;
  */
 public class CurrentAccount extends Accounts{
     private String userPin;
+    public CurrentAccount() {
+        super("","","",0,"", new char [] {'a'});        
+        this.userPin = "";
+    }
     public CurrentAccount(String accNo,String accHolder,String joinDate,double balance, String userName, char[] userPass, String userPin) {
         super(accNo, accHolder, joinDate, balance, userName, userPass);
     

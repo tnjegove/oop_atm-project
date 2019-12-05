@@ -13,8 +13,9 @@ public class SavingsAccount extends Accounts{
     private float interest;
     //private xxx timelimit  data type for time limit on deposit???
     //private xxx link  data type for connection to current account???
-    public SavingsAccount(String accNo,String accHolder,String joinDate,double balance, String userName, char[] userPass, float interest){
+    public SavingsAccount(String accNo,String accHolder,String joinDate,double balance, String userName, char[] userPass){
         super(accNo, accHolder, joinDate, balance, userName, userPass);
+        //this.interest= interest;
     }
 
     public float getInterest() {
