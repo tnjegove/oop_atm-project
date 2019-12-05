@@ -71,6 +71,11 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jbtn_savingsAcc = new javax.swing.JButton();
         jbtn_changePin = new javax.swing.JButton();
         jbtn_back = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jPanel_createNewCurrentAcc = new javax.swing.JPanel();
         jlbl_currentacctitle = new javax.swing.JLabel();
         jlbl_accno = new javax.swing.JLabel();
@@ -107,7 +112,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         setResizable(false);
         setSize(new java.awt.Dimension(520, 500));
 
-        jPanel_loginScreen.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel_loginScreen.setBackground(new java.awt.Color(255, 255, 255));
 
         jbtn_login.setText("Login");
 
@@ -179,52 +184,78 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 .addGap(53, 53, 53))
         );
 
+        jPanel_adminControlPanel.setBackground(new java.awt.Color(255, 255, 255));
         jPanel_adminControlPanel.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jlblTitle.setText("Admin control panel");
 
-        jbtn_currentAcc.setText("Create new current account");
+        jbtn_currentAcc.setText("Current Account");
 
-        jbtn_savingsAcc.setText("Create new savings account");
+        jbtn_savingsAcc.setText("Savings Account");
 
         jbtn_changePin.setText("Change pin on existing account");
 
         jbtn_back.setText("Go Back");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Light", 0, 36)); // NOI18N
+        jLabel9.setText("Create");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI Light", 0, 36)); // NOI18N
+        jLabel11.setText("Change");
 
         javax.swing.GroupLayout jPanel_adminControlPanelLayout = new javax.swing.GroupLayout(jPanel_adminControlPanel);
         jPanel_adminControlPanel.setLayout(jPanel_adminControlPanelLayout);
         jPanel_adminControlPanelLayout.setHorizontalGroup(
             jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
                 .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbtn_savingsAcc)
-                            .addComponent(jbtn_currentAcc)
-                            .addComponent(jbtn_changePin)
-                            .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(jbtn_back))))
-                    .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                        .addGap(198, 198, 198)
-                        .addComponent(jlblTitle)))
-                .addContainerGap(162, Short.MAX_VALUE))
+                    .addComponent(jbtn_currentAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSeparator2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbtn_changePin, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(jbtn_back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSeparator4)
+                    .addComponent(jSeparator3))
+                .addGap(43, 43, 43))
+            .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlblTitle)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addComponent(jLabel11)
+                .addGap(87, 87, 87))
         );
         jPanel_adminControlPanelLayout.setVerticalGroup(
             jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(101, 101, 101)
+                .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbtn_currentAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_changePin, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbtn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(jlblTitle)
-                .addGap(34, 34, 34)
-                .addComponent(jbtn_currentAcc)
-                .addGap(18, 18, 18)
-                .addComponent(jbtn_savingsAcc)
-                .addGap(18, 18, 18)
-                .addComponent(jbtn_changePin)
-                .addGap(41, 41, 41)
-                .addComponent(jbtn_back)
-                .addContainerGap(208, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jlbl_currentacctitle.setText("Create new current account");
@@ -728,6 +759,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
     private javax.swing.JButton jButton5;
     private javax.swing.JLayeredPane jLPane;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -735,11 +767,15 @@ public class ATMLoginForm extends JFrame implements ActionListener {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel_adminControlPanel;
     private javax.swing.JPanel jPanel_createNewCurrentAcc;
     private javax.swing.JPanel jPanel_loginScreen;
     private javax.swing.JPanel jPanel_userInterface;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JButton jbtn_back;
     private javax.swing.JButton jbtn_changePin;
     private javax.swing.JButton jbtn_createCurrentAcc;
