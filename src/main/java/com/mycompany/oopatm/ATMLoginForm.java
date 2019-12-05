@@ -35,7 +35,9 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jPanel_loginScreen.setVisible(true);
         jPanel_adminControlPanel.setVisible(false);
         jPanel_createNewCurrentAcc.setVisible(false);
-        jPanel_userInterface.setVisible(false);
+        jPanel_userInterfaceCurrentAcc.setVisible(false);
+        jPanel_createSavingsAcc.setVisible(false);
+        jPanel_userInterfaceSavingAcc.setVisible(false);
         clearTextFields();
     }
     
@@ -66,6 +68,21 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jtxt_username = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
+        jPanel_createSavingsAcc = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jbtn_SavingAccCreate = new javax.swing.JButton();
         jPanel_adminControlPanel = new javax.swing.JPanel();
         jlblTitle = new javax.swing.JLabel();
         jbtn_currentAcc = new javax.swing.JButton();
@@ -94,7 +111,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jbtn_createCurrentAcc = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jtxt_createCurrentAccPIN = new javax.swing.JTextField();
-        jPanel_userInterface = new javax.swing.JPanel();
+        jPanel_userInterfaceCurrentAcc = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jlbl_userInterfaceAccNo = new javax.swing.JLabel();
         jlbl_userInterfaceHolderName = new javax.swing.JLabel();
@@ -109,21 +126,20 @@ public class ATMLoginForm extends JFrame implements ActionListener {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jPanel_createSavingsAcc = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jbtn_SavingAccCreate = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jPanel_userInterfaceSavingAcc = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jPasswordField2 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -207,6 +223,97 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 .addGap(66, 66, 66))
         );
 
+        jLabel12.setText("jLabel12");
+
+        jLabel13.setText("Account number");
+
+        jLabel14.setText("Account holder");
+
+        jLabel15.setText("Join date");
+
+        jLabel16.setText("Balance");
+
+        jLabel17.setText("username");
+
+        jLabel18.setText("password");
+
+        jTextField1.setText("jTextField1");
+
+        jTextField2.setText("jTextField2");
+
+        jTextField3.setText("jTextField3");
+
+        jTextField4.setText("jTextField4");
+
+        jTextField5.setText("jTextField5");
+
+        jPasswordField1.setText("jPasswordField1");
+
+        jbtn_SavingAccCreate.setText("Create!");
+
+        javax.swing.GroupLayout jPanel_createSavingsAccLayout = new javax.swing.GroupLayout(jPanel_createSavingsAcc);
+        jPanel_createSavingsAcc.setLayout(jPanel_createSavingsAccLayout);
+        jPanel_createSavingsAccLayout.setHorizontalGroup(
+            jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel18))
+                .addGap(76, 76, 76)
+                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
+                        .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                        .addComponent(jbtn_SavingAccCreate)
+                        .addGap(48, 48, 48))))
+        );
+        jPanel_createSavingsAccLayout.setVerticalGroup(
+            jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel12)
+                .addGap(49, 49, 49)
+                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_SavingAccCreate))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(75, Short.MAX_VALUE))
+        );
+
         jPanel_adminControlPanel.setBackground(new java.awt.Color(255, 255, 255));
         jPanel_adminControlPanel.setPreferredSize(new java.awt.Dimension(500, 500));
 
@@ -247,11 +354,10 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                                 .addComponent(jSeparator2)
                                 .addGap(18, 18, 18))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_adminControlPanelLayout.createSequentialGroup()
-                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel_adminControlPanelLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jbtn_currentAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbtn_currentAcc, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE))
                         .addGap(27, 27, 27)))
                 .addGroup(jPanel_adminControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_adminControlPanelLayout.createSequentialGroup()
@@ -292,7 +398,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                                 .addComponent(jbtn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jbtn_savingsAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(332, Short.MAX_VALUE))
         );
 
         jlbl_currentacctitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -402,10 +508,10 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 .addGroup(jPanel_createNewCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(jtxt_createCurrentAccPIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(346, Short.MAX_VALUE))
         );
 
-        jLabel1.setText("User interface ");
+        jLabel1.setText("Current account");
 
         jlbl_userInterfaceAccNo.setText("Account number");
 
@@ -439,180 +545,172 @@ public class ATMLoginForm extends JFrame implements ActionListener {
 
         jButton5.setText("Change PIN");
 
-        javax.swing.GroupLayout jPanel_userInterfaceLayout = new javax.swing.GroupLayout(jPanel_userInterface);
-        jPanel_userInterface.setLayout(jPanel_userInterfaceLayout);
-        jPanel_userInterfaceLayout.setHorizontalGroup(
-            jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel_userInterfaceCurrentAccLayout = new javax.swing.GroupLayout(jPanel_userInterfaceCurrentAcc);
+        jPanel_userInterfaceCurrentAcc.setLayout(jPanel_userInterfaceCurrentAccLayout);
+        jPanel_userInterfaceCurrentAccLayout.setHorizontalGroup(
+            jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
+                .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
                         .addGap(232, 232, 232)
                         .addComponent(jLabel1))
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
+                    .addGroup(jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
                         .addGap(206, 206, 206)
                         .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_userInterfaceLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
+                .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel7))
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
+                    .addGroup(jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_userInterfaceLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
                         .addComponent(jlbl_userInterfaceHolderName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_userInterfaceLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
                         .addComponent(jlbl_userInterfaceAccNo)
                         .addGap(37, 37, 37)
                         .addComponent(jLabel6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 353, Short.MAX_VALUE)
+                .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton5)
                     .addComponent(jButton4)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
                 .addGap(86, 86, 86))
         );
-        jPanel_userInterfaceLayout.setVerticalGroup(
-            jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
+        jPanel_userInterfaceCurrentAccLayout.setVerticalGroup(
+            jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jLabel1)
                 .addGap(43, 43, 43)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel_userInterfaceLayout.createSequentialGroup()
-                        .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel_userInterfaceCurrentAccLayout.createSequentialGroup()
+                        .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlbl_userInterfaceAccNo)
                             .addComponent(jLabel6)
                             .addComponent(jButton2))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlbl_userInterfaceHolderName)
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton3))
-                    .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
                         .addComponent(jLabel3)))
                 .addGap(30, 30, 30)
-                .addGroup(jPanel_userInterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel_userInterfaceCurrentAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel7))
                 .addGap(4, 4, 4)
                 .addComponent(jButton4)
                 .addGap(45, 45, 45)
                 .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 326, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(64, 64, 64))
         );
 
-        jLabel12.setText("jLabel12");
+        jLabel19.setText("Savings Account");
 
-        jLabel13.setText("Account number");
+        jLabel20.setText("Account number");
 
-        jLabel14.setText("Account holder");
+        jLabel21.setText("Account holder");
 
-        jLabel15.setText("Join date");
+        jLabel22.setText("Join date");
 
-        jLabel16.setText("Balance");
+        jLabel23.setText("Balance");
 
-        jLabel17.setText("username");
+        jLabel24.setText("username");
 
-        jLabel18.setText("password");
+        jLabel25.setText("Password");
 
-        jTextField1.setText("jTextField1");
+        jLabel26.setText("jLabel26");
 
-        jTextField2.setText("jTextField2");
+        jLabel27.setText("jLabel27");
 
-        jTextField3.setText("jTextField3");
+        jLabel28.setText("jLabel28");
 
-        jTextField4.setText("jTextField4");
+        jLabel29.setText("jLabel29");
 
-        jTextField5.setText("jTextField5");
+        jLabel30.setText("jLabel30");
 
-        jbtn_SavingAccCreate.setText("Create!");
+        jPasswordField2.setText("jPasswordField2");
 
-        jPasswordField1.setText("jPasswordField1");
-
-        javax.swing.GroupLayout jPanel_createSavingsAccLayout = new javax.swing.GroupLayout(jPanel_createSavingsAcc);
-        jPanel_createSavingsAcc.setLayout(jPanel_createSavingsAccLayout);
-        jPanel_createSavingsAccLayout.setHorizontalGroup(
-            jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel18))
-                .addGap(76, 76, 76)
-                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                        .addComponent(jbtn_SavingAccCreate)
-                        .addGap(63, 63, 63))
-                    .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
-                        .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        javax.swing.GroupLayout jPanel_userInterfaceSavingAccLayout = new javax.swing.GroupLayout(jPanel_userInterfaceSavingAcc);
+        jPanel_userInterfaceSavingAcc.setLayout(jPanel_userInterfaceSavingAccLayout);
+        jPanel_userInterfaceSavingAccLayout.setHorizontalGroup(
+            jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_userInterfaceSavingAccLayout.createSequentialGroup()
+                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel_userInterfaceSavingAccLayout.createSequentialGroup()
+                        .addGap(211, 211, 211)
+                        .addComponent(jLabel19))
+                    .addGroup(jPanel_userInterfaceSavingAccLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel25))
+                        .addGap(57, 57, 57)
+                        .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel26)
+                            .addComponent(jLabel27)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel30)
+                            .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
-        jPanel_createSavingsAccLayout.setVerticalGroup(
-            jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel12)
-                .addGap(49, 49, 49)
-                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel_createSavingsAccLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jbtn_SavingAccCreate)))
-                .addGap(17, 17, 17)
-                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jPanel_userInterfaceSavingAccLayout.setVerticalGroup(
+            jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_userInterfaceSavingAccLayout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jLabel19)
                 .addGap(37, 37, 37)
-                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(jPanel_createSavingsAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel26))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel27))
+                .addGap(55, 55, 55)
+                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel28))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel29))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel30))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel_userInterfaceSavingAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jLPane.setLayer(jPanel_loginScreen, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLPane.setLayer(jPanel_createSavingsAcc, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLPane.setLayer(jPanel_adminControlPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLPane.setLayer(jPanel_createNewCurrentAcc, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLPane.setLayer(jPanel_userInterface, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLPane.setLayer(jPanel_createSavingsAcc, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLPane.setLayer(jPanel_userInterfaceCurrentAcc, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLPane.setLayer(jPanel_userInterfaceSavingAcc, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLPaneLayout = new javax.swing.GroupLayout(jLPane);
         jLPane.setLayout(jLPaneLayout);
@@ -624,11 +722,16 @@ public class ATMLoginForm extends JFrame implements ActionListener {
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel_createNewCurrentAcc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel_userInterface, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel_userInterfaceCurrentAcc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jPanel_createSavingsAcc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLPaneLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel_userInterfaceSavingAcc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jLPaneLayout.setVerticalGroup(
@@ -639,15 +742,20 @@ public class ATMLoginForm extends JFrame implements ActionListener {
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel_createNewCurrentAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel_userInterface, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel_userInterfaceCurrentAcc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jPanel_createSavingsAcc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jLPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLPaneLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel_userInterfaceSavingAcc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel_userInterface.getAccessibleContext().setAccessibleDescription("");
+        jPanel_userInterfaceCurrentAcc.getAccessibleContext().setAccessibleDescription("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -665,7 +773,7 @@ public class ATMLoginForm extends JFrame implements ActionListener {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jPanel_userInterface.setVisible(false);
+        jPanel_userInterfaceCurrentAcc.setVisible(false);
         jPanel_loginScreen.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -743,8 +851,26 @@ public class ATMLoginForm extends JFrame implements ActionListener {
                 }
                 else if((AccNo=userNamePasswordIsCorrect(jtxt_username.getText(),jpassword.getPassword()))!=null) {///UNFINISHED!!!!! 
                     System.out.println("Reload file into accounts.... accno is:"+AccNo);
+                    
                     jPanel_loginScreen.setVisible(false);
-                    jPanel_userInterface.setVisible(true);
+                    for (int i=0;i<accounts.size();i++) {
+                        if (accounts.get(i).getAccNo().equals(AccNo)){
+                            if (accounts.get(i) instanceof CurrentAccount) {
+                                jPanel_userInterfaceCurrentAcc.setVisible(true);
+                                jLabel26.setText(accounts.get(i).getAccNo());
+                                //finish this
+                                
+                                
+                            }
+                            
+                            else {
+                                jPanel_userInterfaceSavingAcc.setVisible(true);
+                                //finish this also
+                            }
+                        }
+                    
+                    }
+                    //jPanel_userInterfaceCurrentAcc.setVisible(true);
                     /*if(file.exists()){ // this block shouldn't be here....
                         try {
                             FileInputStream fi = new FileInputStream(file);
@@ -1083,8 +1209,20 @@ public class ATMLoginForm extends JFrame implements ActionListener {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1095,8 +1233,10 @@ public class ATMLoginForm extends JFrame implements ActionListener {
     private javax.swing.JPanel jPanel_createNewCurrentAcc;
     private javax.swing.JPanel jPanel_createSavingsAcc;
     private javax.swing.JPanel jPanel_loginScreen;
-    private javax.swing.JPanel jPanel_userInterface;
+    private javax.swing.JPanel jPanel_userInterfaceCurrentAcc;
+    private javax.swing.JPanel jPanel_userInterfaceSavingAcc;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

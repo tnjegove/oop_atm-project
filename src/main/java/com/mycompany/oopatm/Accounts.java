@@ -18,6 +18,7 @@ public class Accounts implements Serializable{
     private double balance;
     private String userName;
     private char[] userPass;
+    private String AccountType;
 
     public String getAccNo() {
         return accNo;
