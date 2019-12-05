@@ -10,8 +10,19 @@ package com.mycompany.oopatm;
  * @author x19112700
  */
 public class CurrentAccount extends Accounts{
-    public CurrentAccount(String accNo,String accHolder,String joinDate,double balance, String userName, char[] userPass, float interest) {
+    private String userPin;
+    public CurrentAccount(String accNo,String accHolder,String joinDate,double balance, String userName, char[] userPass, String userPin) {
         super(accNo, accHolder, joinDate, balance, userName, userPass);
+    
+        this.userPin = userPin;
+    }
+
+    public String getUserPin() {
+        return userPin;
+    }
+
+    public void setUserPin(String userPin) {
+        this.userPin = userPin;
     }
     
 }
